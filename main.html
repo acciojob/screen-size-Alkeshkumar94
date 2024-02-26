@@ -8,7 +8,21 @@
 
 <body>
 	<!-- the entire body must be written by student -->
+	<div id="sizeInfo">
+		<h1 id="dimensions"></h1>
+	</div>
     <script type="text/javascript" src="./script.js">
+		function updateSizeInfo() {
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    
+    var dimensionsElement = document.getElementById('dimensions');
+    dimensionsElement.textContent = 'Width: ' + width + 'px, Height: ' + height + 'px';
+}
+
+
+// Attach the function to window resize event
+window.addEventListener('resize', updateSizeInfo);
 </script>
 
 </body>
